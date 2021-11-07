@@ -111,6 +111,9 @@ md"Human induced Climate Change Modelling °C  = $(@bind human_temp Slider(0.1:0
 # ╔═╡ 4e88e20b-066c-4144-a913-e9be59a2395d
 gr();
 
+# ╔═╡ 86e88866-f998-4d3e-bd41-eb2c5fedd97a
+gr();
+
 # ╔═╡ 26940047-17c7-4c55-9e94-27149af0e4f5
 begin
 	S = 1368.0
@@ -151,6 +154,17 @@ begin
 	# annotate!(53,15.8,text("Global Temperature At 1850"))
 end
 
+# ╔═╡ 9dac79ee-fb2d-4fc6-af12-db40fd7d4a92
+begin
+	current = solve(p3)(191.1);
+end;
+
+# ╔═╡ 48b66ee2-9b50-4af5-8c42-4e47d16c650b
+md"""
+Current Temperature = **$(current) °C** \
+Change In Temperature = **$(current - 14.10)**
+"""
+
 # ╔═╡ 670ec61d-0175-4f1d-9b52-a31576824c77
 greenhouse_effect(CO2(159));
 
@@ -190,13 +204,16 @@ gr();
 # ╟─d35ee881-7353-46e1-8e9f-15a5ecbc12ce
 # ╟─223453e4-3642-4953-a942-53effa6c126b
 # ╟─16488cb8-a129-4dff-a575-887407ed316c
-# ╟─bb77a7a1-a226-4dca-a980-804a35f96817
 # ╟─628ece4f-024e-440a-9183-e5d8011ecfcc
+# ╟─48b66ee2-9b50-4af5-8c42-4e47d16c650b
 # ╟─4c626313-91b7-42d2-bc1e-32ac704dd749
+# ╟─bb77a7a1-a226-4dca-a980-804a35f96817
 # ╟─b53a82f4-45a3-4657-8cb9-e4f09715570c
 # ╟─3f866044-279c-41c4-a34f-ba505332813d
+# ╟─9dac79ee-fb2d-4fc6-af12-db40fd7d4a92
 # ╟─5aeef5ee-866b-488a-ab8e-757f9224b086
 # ╟─4e88e20b-066c-4144-a913-e9be59a2395d
+# ╟─86e88866-f998-4d3e-bd41-eb2c5fedd97a
 # ╟─a32cbb16-29b9-4cb6-acec-9345a47e0c94
 # ╟─670ec61d-0175-4f1d-9b52-a31576824c77
 # ╟─14d6487f-62fc-40e6-9802-b0f6476e28e9
